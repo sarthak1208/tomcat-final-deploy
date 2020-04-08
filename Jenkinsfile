@@ -14,7 +14,7 @@ bat "copy target\\JenkinsWar.war\"${tomcatWeb}\\JenkinsWar.war\""
 }
 stage('Start Tomcat Server'){
 sleep ('Start Tomcat Server')
-bat "$(tomcatBin)\\startup.bat"
+  bat "${tomcatBin}\\startup.bat"
 sleep(time:100,unit:"SECONDS")
 }
 }
