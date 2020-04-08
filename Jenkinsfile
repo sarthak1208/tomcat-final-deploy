@@ -10,7 +10,7 @@ def mvnHome= tool name: 'Maven 3', type: 'maven'
 sh "${mvnHome}/bin/mvn package"
 }
 stage('Deploy to Tomcat'){
-sh "scp target/JenkinsWar.war/"${tomcatWeb}""
+sh "scp JenkinsWar.war/"${tomcatWeb}""
 }
 stage('Start Tomcat Server'){
 sleep ('Start Tomcat Server')
