@@ -12,9 +12,9 @@ sh "${mvnHome}/bin/mvn package"
 stage('Deploy to Tomcat'){
 sh "cp /var/lib/jenkins/workspace/sarthak-tomcat-pipeline/target/*.jar /opt/tomcat/webapps/"
 }
-stage('Start Tomcat Server'){
-sleep ('Start Tomcat Server')
-  sh "opt/tomcat/bin/startup.sh"
+//stage('Start Tomcat Server'){
+//sleep ('Start Tomcat Server')
+  //sh "opt/tomcat/bin/startup.sh"
 //sleep(time:100,unit:"SECONDS")
-}
+//}
 }
